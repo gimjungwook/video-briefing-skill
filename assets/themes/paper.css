@@ -1,0 +1,7 @@
+/* Paper: quiet, bright, document-like. */
+:root {
+  --paper:#fffefb;--shell:#f5f3ee;--sand:#eae8e1;--drift:#ddd9d0;
+  --ink:#252923;--ink2:#42493f;--ink3:#656c61;--ink4:#7c8378;
+  --accent:#49654a;--kelp:#49654a;--kelp-wash:#e5eddf;--band:#252923;--sub:#fffefb;
+  --display:"VB Sans",sans-serif;--ui:"VB Sans",sans-serif;--num:"VB Sans",sans-serif;--word:"VB Sans",sans-serif;
+}

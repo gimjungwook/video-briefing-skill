@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Briefing"
+  short_description: "Explain AI work as local narrated motion videos"
+  default_prompt: "Use $video-briefing to explain the work as a local narrated video at normal speed."

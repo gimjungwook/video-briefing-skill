@@ -1,0 +1,17 @@
+/* Terminal: dark, high contrast, useful for technical briefings. */
+:root {
+  --paper:#111827;--shell:#1b2535;--sand:#273448;--drift:#36465b;
+  --ink:#f4f8ff;--ink2:#dae4f2;--ink3:#b2c1d4;--ink4:#97abc3;
+  --accent:#7ee2b8;--kelp:#7ee2b8;--kelp-wash:#173b38;--sea:#91c8ff;--sea-wash:#223953;
+  --clay:#ffad9e;--clay-wash:#4c2d36;--tide:#bdc6ff;--tide-wash:#303957;
+  --amber:#ffe09a;--amber-wash:#50442a;--hl:#394e42;--band:#080f1d;--sub:#f4f8ff;
+  --line:#3a4c64;--line-soft:#273448;
+  --display:"VB Sans",sans-serif;--ui:"VB Sans",sans-serif;--num:"VB Sans",sans-serif;--word:"VB Sans",sans-serif;
+}
+.scene { background-image: linear-gradient(90deg, transparent 107px, var(--line-soft) 108px, transparent 109px); }
+.head h1 { font-family: "SF Mono", Menlo, "VB Sans", monospace; font-size: 52px; letter-spacing: -1.5px; }
+.scene-cover h1 { font-family: "SF Mono", Menlo, "VB Sans", monospace; font-size: 76px; }
+.card, .row, .node, .note, .perm, .shotwrap, .code { border: 2px solid var(--line); border-radius: 8px; }
+.tile, .meta, .chip { border-radius: 6px !important; }
+.msg.user, .cmp .lab.r { color: #111827; }
+.cover-orbit { border-radius: 12px; }

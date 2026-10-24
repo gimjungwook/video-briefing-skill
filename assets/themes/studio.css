@@ -1,0 +1,15 @@
+/* Studio: colourful cards and bold headings for project updates. */
+:root {
+  --paper:#f5f2ff;--shell:#ffffff;--sand:#e7dffc;--drift:#d8cef3;
+  --ink:#2b2144;--ink2:#4b3d65;--ink3:#706286;--ink4:#8c7e9d;
+  --accent:#7150ab;--kelp:#446951;--kelp-wash:#e1eee5;--sea:#3b618b;--sea-wash:#e2ecf8;
+  --tide:#7150ab;--tide-wash:#ebe3fa;--band:#2b2144;--sub:#ffffff;
+  --display:"VB Sans",sans-serif;--ui:"VB Sans",sans-serif;--num:"VB Sans",sans-serif;--word:"VB Sans",sans-serif;
+}
+.scene { border-left: 20px solid var(--accent); }
+.scene-cover { background: var(--paper); }
+.head h1 { font-size: 66px; font-weight: 800; }
+.card, .node { border: 2px solid var(--drift); border-radius: 40px 40px 8px 40px; }
+.card .tile { border-radius: 50%; }
+.scene-cover .meta { border-radius: 4px; border-left: 6px solid var(--accent); }
+.cover-orbit { border-width: 12px; border-color: var(--sand); }
