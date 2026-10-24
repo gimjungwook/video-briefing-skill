@@ -1,12 +1,25 @@
-# Video Briefing
+![Video Briefing — an otter listening as agent work becomes a video](assets/previews/video-briefing-hero.png)
 
-**Let your agents explain their work while you watch or listen.**
+<h1 align="center">Video Briefing</h1>
+
+<p align="center"><strong>Let your agents explain their work while you watch or listen.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/gimjungwook/video-briefing-skill/releases/download/v0.1.0/video-briefing-paper-1x.mp4">Watch the 38-second demo</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#three-templates">Templates</a> ·
+  <a href="https://otterworkspace.ai/">Otter Workspace ↗</a>
+</p>
+
+<p align="center">MIT code · Local voice &amp; rendering · 1x by default · Apple Silicon Macs</p>
+
+## Your agents work in parallel. You still have to catch up.
 
 My AI agents can work in parallel, but I still have to understand their results and revisions. I became the bottleneck. When I cannot focus on another long answer, playing a video and hearing it again helps me catch up.
 
 This is the skill I use for that: a local narrated video with motion, captions, chapters and highlights timed to the explanation. It is a tool for understanding the work, not proof that the work is correct.
 
-## Included
+## What you get
 
 - Narration with local Supertonic 3; Korean and English workflows.
 - Word timing and ending checks with local Whisper.
@@ -15,11 +28,29 @@ This is the skill I use for that: a local narrated video with motion, captions, 
 - **1x narration by default**, with an optional 2x setting.
 - MP4 export, chapters, layout checks, loudness checks and review frames.
 
-![Paper, Terminal and Studio templates](assets/previews/templates.jpg)
-
 No paid speech or rendering API is required. Initial setup downloads models and dependencies. Your coding agent or chat service has its own costs; local hardware and electricity still apply. This is not a voice-cloning package.
 
-## Supported setup
+## Three templates
+
+![Actual rendered examples of the Paper, Terminal and Studio templates](assets/previews/templates.jpg)
+
+| Paper | Terminal | Studio |
+|---|---|---|
+| Warm, bright pages with quiet green accents. | Dark backgrounds, crisp borders and monospace headings. | Colourful cards, rounded shapes and bold headings. |
+
+Choose a look in your outline. Narration, captions and scene timing follow the same workflow.
+
+## Also building: Otter Workspace 🦦
+
+I’m building [**Otter Workspace**](https://otterworkspace.ai/) alongside this skill: **one workspace where every app works from one memory.**
+
+[Memory](https://memory.otterworkspace.ai/) gives your AI a shared memory. [Docs](https://docs.otterworkspace.ai/), [Meetings](https://meetings.otterworkspace.ai/) and [Schedule](https://schedule.otterworkspace.ai/) bring documents, meeting decisions and plans into the same workspace. Connect the AI you already use: ChatGPT, Claude, Codex or Claude Code.
+
+**[Explore Otter Workspace →](https://otterworkspace.ai/)**
+
+Video Briefing runs independently. You don’t need an Otter account to use it.
+
+## Quick start
 
 The first release targets **macOS on Apple Silicon** because the transcription step uses MLX. Other systems are untested. You need Python 3.11+, Node 22+, Google Chrome and FFmpeg (`ffprobe` included). On a Mac with Homebrew:
 
@@ -27,9 +58,11 @@ The first release targets **macOS on Apple Silicon** because the transcription s
 brew install python@3.12 node ffmpeg
 ```
 
-From this repository:
+Clone the repository and install the Python dependencies:
 
 ```sh
+git clone https://github.com/gimjungwook/video-briefing-skill.git
+cd video-briefing-skill
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -85,6 +118,9 @@ Video reports are opt-in. To request them after each completed task, say so expl
 
 ## Configuration
 
+<details>
+<summary>Paths, models, speed and render settings</summary>
+
 | Variable | Purpose |
 |---|---|
 | `VB_FONT` | Local subtitle font file; defaults to the downloaded Noto Sans KR font |
@@ -95,10 +131,12 @@ Video reports are opt-in. To request them after each completed task, say so expl
 | `VB_TEMPO` | Optional narration speed from 0.5 to 2; project `tempo.txt` takes priority |
 | `VB_JOBS` | Parallel render processes; default uses up to four |
 
+</details>
+
 Treat projects as trusted local code: `cues.py` is executed by the renderer. Do not run an untrusted downloaded project without reviewing it.
 
 ## License
 
 The original skill code and templates are MIT licensed. Third-party dependencies retain their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
 
-Created by [Jungwook Kim](https://github.com/gimjungwook). I am also building [Otter Workspace](https://otterworkspace.ai/).
+Created by [Jungwook Kim](https://github.com/gimjungwook) · Building [Otter Workspace](https://otterworkspace.ai/).
